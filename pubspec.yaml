@@ -12,6 +12,7 @@ cupertino_icons: ^1.0.2
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^0.22.0
 
 dev_dependencies:
   flutter_test:
@@ -28,3 +29,5 @@ flutter:
       fonts:
         - asset: assets/fonts/DisposableDroidBB.ttf
         - asset: assets/fonts/DisposableDroidBB_bld.ttf
+  assets:
+    - assets/images/
