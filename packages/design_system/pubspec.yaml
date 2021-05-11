@@ -1,17 +1,13 @@
-name: gamespedia
-description: A new Flutter project.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
-version: 1.0.0+1
+name: design_system
+description: A new Flutter package project.
+version: 0.0.1
+author:
 
 environment:
   sdk: '>=2.7.0 <3.0.0'
-
-cupertino_icons: ^1.0.2
+  flutter: '>=1.17.0'
 
 dependencies:
-  design_system:
-    path: packages/design_system
   flutter:
     sdk: flutter
 
@@ -20,7 +16,6 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
-  uses-material-design: true
   fonts:
     - family: SilkScreen
       fonts:
@@ -30,5 +25,3 @@ flutter:
       fonts:
         - asset: assets/fonts/DisposableDroidBB.ttf
         - asset: assets/fonts/DisposableDroidBB_bld.ttf
-  assets:
-    - assets/images/
