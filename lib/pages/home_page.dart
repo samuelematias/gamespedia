@@ -12,6 +12,10 @@ class HomePage extends StatelessWidget {
           Text(
             'Gamespedia!',
             textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'SilkScreen',
+              fontSize: 20,
+            ),
           )
         ],
       ),
