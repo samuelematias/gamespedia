@@ -39,15 +39,16 @@ class HomePage extends StatelessWidget {
           FractionallySizedBox(
             widthFactor: 0.5,
             child: PrimaryButton(
-                label: 'GO TO GAMES!',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute<GamesListPage>(
-                      builder: (context) => const GamesListPage(),
-                    ),
-                  );
-                }),
+              label: 'GO TO GAMES!',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute<GamesListPage>(
+                    builder: (context) => const GamesListPage(),
+                  ),
+                );
+              },
+            ),
           ),
           const SizedBox(),
         ],

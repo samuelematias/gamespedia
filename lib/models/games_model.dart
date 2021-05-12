@@ -26,27 +26,27 @@ class Games {
   String name;
   String thumbnail;
   String description;
-  String type;
-  List<Items> items;
+  String charactersType;
+  List<CharactersList> charactersList;
 
   Games(
       {this.uuid,
       this.name,
       this.thumbnail,
       this.description,
-      this.type,
-      this.items});
+      this.charactersType,
+      this.charactersList});
 
   Games.fromJson(Map<String, dynamic> json) {
     uuid = json['uuid'];
     name = json['name'];
     thumbnail = json['thumbnail'];
     description = json['description'];
-    type = json['type'];
-    if (json['items'] != null) {
-      items = new List<Items>();
-      json['items'].forEach((v) {
-        items.add(new Items.fromJson(v));
+    charactersType = json['charactersType'];
+    if (json['charactersList'] != null) {
+      charactersList = new List<CharactersList>();
+      json['charactersList'].forEach((v) {
+        charactersList.add(new CharactersList.fromJson(v));
       });
     }
   }
@@ -57,24 +57,26 @@ class Games {
     data['name'] = this.name;
     data['thumbnail'] = this.thumbnail;
     data['description'] = this.description;
-    data['type'] = this.type;
-    if (this.items != null) {
-      data['items'] = this.items.map((v) => v.toJson()).toList();
+    data['charactersType'] = this.charactersType;
+    if (this.charactersList != null) {
+      data['charactersList'] =
+          this.charactersList.map((v) => v.toJson()).toList();
     }
     return data;
   }
 }
 
-class Items {
+class CharactersList {
   String uuid;
   String name;
   String description;
   String about;
   String thumbnail;
 
-  Items({this.uuid, this.name, this.description, this.about, this.thumbnail});
+  CharactersList(
+      {this.uuid, this.name, this.description, this.about, this.thumbnail});
 
-  Items.fromJson(Map<String, dynamic> json) {
+  CharactersList.fromJson(Map<String, dynamic> json) {
     uuid = json['uuid'];
     name = json['name'];
     description = json['description'];

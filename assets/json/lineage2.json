@@ -5,41 +5,41 @@
             "name": "Lineage 2",
             "thumbnail": "https://cdn-www.bluestacks.com/bs-images/lineage-revolution-ii_banner.jpg",
             "description": "Lineage II is a massive multiplayer online role-playing game (MMORPG) for Microsoft Windows and the second game in the Lineage series. It is a prequel to Lineage and is set 150 years before the firstgame.It has become popular since its October 1, 2003 launch in South Korea, reporting 1,000,918 unique users during the month of March 2007. To date, the game has been played by more than 14 million users, most of whom are based in Asia. One of his most successful chronicles was Interlude (C6), which we will discuss below about his races.",
-            "type": "Races",
-            "items": [
+            "charactersType": "Races",
+            "charactersList": [
                 {
                     "uuid": "8685c19c-b3f5-4e69-bedd-a9bb42ef098b",
                     "name": "Human",
                     "description": "Humans are the most diverse and capable of all the races. They have the most balanced stats and the largest selection of available classes. Although Humans were created by Gran Kain, they worship Einhasad, the Goddess of Light.",
-                    "about": "Available Classes: Fighter / Mystic",
+                    "about": "Available Classes: Fighter / Mystic.",
                     "thumbnail": "https://i.imgur.com/iiDisMB.png"
                 },
                 {
                     "uuid": "976b1ce6-cfae-4e31-b635-7d6bb1d9b268",
                     "name": "Elf",
                     "description": "Elves were born of water, making them fluid, agile, and infused with good magic. Deeply in tune with the forces of nature, they worship Eva, the second Goddess of Water. Elves excel at beneficial magic, archery, and singing above all.",
-                    "about": "Available Classes: Fighter / Mystic",
+                    "about": "Available Classes: Fighter / Mystic.",
                     "thumbnail": "https://i.imgur.com/mlMjgcD.png"
                 },
                 {
                     "uuid": "f4907df0-89ca-41fa-abd0-b88b09d95838",
                     "name": "Dark Elf",
                     "description": "Dark Elves were once part of the Elven tribes, but were banished after they learned black magic in order to obtain the power to fight Humans.",
-                    "about": "Available Classes: Fighter / Mystic",
+                    "about": "Available Classes: Fighter / Mystic.",
                     "thumbnail": "https://i.imgur.com/uyarIph.png"
                 },
                 {
                     "uuid": "624be012-a4d9-4dff-b3e3-5e828b4e2b42",
                     "name": "Orc",
                     "description": "The Orc race is the race of fire. Among all races, Orcs possess the greatest physical strength, with high maximum HP and MP levels but have slow movement, attack, and casting speeds.",
-                    "about": "Available Classes: Fighter / Mystic",
+                    "about": "Available Classes: Fighter / Mystic.",
                     "thumbnail": "https://i.imgur.com/Ucaq0In.png"
                 },
                 {
                     "uuid": "81e8e885-6c7a-4ddd-a2b9-47b2b7f346cd",
-                    "name": "Orc",
+                    "name": "Dwarf",
                     "description": "Dwarves are of the race of earth. They excel at crafting, resource gathering, and heavy combat. Their prowess and great physical strength allows them to take on multiple enemies at once.",
-                    "about": "Available Classes: Fighter",
+                    "about": "Available Classes: Fighter.",
                     "thumbnail": "https://i.imgur.com/9m69eeS.png"
                 }
             ]

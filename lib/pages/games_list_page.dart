@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../controllers/games_controller.dart';
 import '../models/models.dart';
+import 'pages.dart';
 
 class GamesListPage extends StatefulWidget {
   const GamesListPage({Key key}) : super(key: key);
@@ -99,7 +100,14 @@ class _List extends StatelessWidget {
         return CardImage(
           imageUrl: game.thumbnail,
           overlayText: game.name,
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute<GameDetail>(
+                builder: (context) => GameDetail(game: game),
+              ),
+            );
+          },
         );
       },
     );
