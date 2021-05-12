@@ -3,6 +3,7 @@ import 'package:design_system/design_system.dart';
 
 import '../app/utils/utils.dart';
 import '../constants/constants.dart';
+import 'games_list_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
@@ -10,6 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: secondaryColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -27,7 +29,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Center(
                   child: const Text(
-                    'Gamespedia!',
+                    'Gamespedia',
                     textAlign: TextAlign.center,
                   ).h1(color: secondaryColor),
                 ),
@@ -37,9 +39,15 @@ class HomePage extends StatelessWidget {
           FractionallySizedBox(
             widthFactor: 0.5,
             child: PrimaryButton(
-              label: 'GO TO GAMES!',
-              onPressed: () {},
-            ),
+                label: 'GO TO GAMES!',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute<GamesListPage>(
+                      builder: (context) => const GamesListPage(),
+                    ),
+                  );
+                }),
           ),
           const SizedBox(),
         ],
