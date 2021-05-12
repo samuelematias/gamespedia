@@ -28,10 +28,14 @@ class _GamesListPageState extends State<GamesListPage> {
       appBar: AppBar(
         backgroundColor: secondaryColor,
         elevation: 0,
+        title: const Text('Games List').h1(),
+        centerTitle: true,
       ),
       body: AnimatedBuilder(
         animation: controller.state,
-        builder: (_, __) => _Body(controller: controller),
+        builder: (_, __) => SafeArea(
+          child: _Body(controller: controller),
+        ),
       ),
     );
   }
@@ -47,8 +51,7 @@ class _Body extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: spaceM),
       child: Column(
         children: <Widget>[
-          const Text('Games List').h1(),
-          const SizedBox(height: spaceL),
+          const SizedBox(height: spaceM),
           _HandleBody(controller: controller),
         ],
       ),

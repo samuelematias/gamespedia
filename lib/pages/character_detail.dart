@@ -14,8 +14,14 @@ class CharacterDetail extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: secondaryColor,
         elevation: 0,
+        title: const Text('Detail').h1(),
+        centerTitle: true,
       ),
-      body: Center(child: _Body(character: character)),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: _Body(character: character),
+        ),
+      ),
     );
   }
 }
@@ -30,13 +36,17 @@ class _Body extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: spaceM),
       child: Column(
         children: <Widget>[
-          const Text('Character Detail').h1(),
-          const SizedBox(height: spaceL),
-          Text(character.name).h1(),
-          const SizedBox(height: spaceL),
-          Text(character.description).p1(),
-          const SizedBox(height: spaceL),
-          Text(character.about).p1(),
+          Column(
+            children: [
+              const SizedBox(height: spaceM),
+              Text(character.name).h1(),
+              const SizedBox(height: spaceL),
+              Text(character.description).p1(),
+              const SizedBox(height: spaceL),
+              Text(character.about).p1(),
+              const SizedBox(height: spaceL),
+            ],
+          ),
         ],
       ),
     );

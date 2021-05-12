@@ -15,8 +15,12 @@ class CharacterList extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: secondaryColor,
         elevation: 0,
+        title: const Text('Character List').h1(),
+        centerTitle: true,
       ),
-      body: _Body(characters: characters),
+      body: SafeArea(
+        child: _Body(characters: characters),
+      ),
     );
   }
 }
@@ -31,9 +35,8 @@ class _Body extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: spaceM),
       child: Column(
         children: <Widget>[
-          const Text('Character List').h1(),
-          const SizedBox(height: spaceL),
-          Expanded(child: _List(characters: characters))
+          const SizedBox(height: spaceM),
+          Expanded(child: _List(characters: characters)),
         ],
       ),
     );
