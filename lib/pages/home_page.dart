@@ -12,46 +12,49 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: secondaryColor,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(
-            height: 408,
-            child: Stack(
-              children: <Widget>[
-                SizedBox(
-                  width: ScreenSize().col_12(context: context),
-                  child: Image.asset(
-                    gamespediaImg,
-                    fit: BoxFit.cover,
-                    // fit: BoxFit.contain,
+      body: SafeArea(
+        top: false,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              height: 408,
+              child: Stack(
+                children: <Widget>[
+                  SizedBox(
+                    width: ScreenSize().col_12(context: context),
+                    child: Image.asset(
+                      gamespediaImg,
+                      fit: BoxFit.cover,
+                      // fit: BoxFit.contain,
+                    ),
                   ),
-                ),
-                Center(
-                  child: const Text(
-                    'Gamespedia',
-                    textAlign: TextAlign.center,
-                  ).h1(color: secondaryColor),
-                ),
-              ],
-            ),
-          ),
-          FractionallySizedBox(
-            widthFactor: 0.5,
-            child: PrimaryButton(
-              label: 'GO TO GAMES!',
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute<GamesListPage>(
-                    builder: (context) => const GamesListPage(),
+                  Center(
+                    child: const Text(
+                      'Gamespedia',
+                      textAlign: TextAlign.center,
+                    ).h1(color: secondaryColor),
                   ),
-                );
-              },
+                ],
+              ),
             ),
-          ),
-          const SizedBox(),
-        ],
+            FractionallySizedBox(
+              widthFactor: 0.5,
+              child: PrimaryButton(
+                label: 'GO TO GAMES!',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute<GamesListPage>(
+                      builder: (context) => const GamesListPage(),
+                    ),
+                  );
+                },
+              ),
+            ),
+            const SizedBox(),
+          ],
+        ),
       ),
     );
   }

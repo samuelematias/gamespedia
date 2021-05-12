@@ -16,8 +16,14 @@ class GameDetail extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: secondaryColor,
         elevation: 0,
+        title: const Text('Detail').h1(),
+        centerTitle: true,
       ),
-      body: Center(child: _Body(game: game)),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: _Body(game: game),
+        ),
+      ),
     );
   }
 }
@@ -32,8 +38,7 @@ class _Body extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: spaceM),
       child: Column(
         children: <Widget>[
-          const Text('Game Detail').h1(),
-          const SizedBox(height: spaceL),
+          const SizedBox(height: spaceM),
           Text(game.name).h1(),
           const SizedBox(height: spaceL),
           Text(game.description).p1(),
@@ -52,6 +57,8 @@ class _Body extends StatelessWidget {
               );
             },
           ),
+          const SizedBox(height: spaceL),
+          // const SizedBox(height: spaceL),
         ],
       ),
     );
