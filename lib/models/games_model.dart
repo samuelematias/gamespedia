@@ -26,7 +26,7 @@ class Games {
   String name;
   String thumbnail;
   String description;
-  String type;
+  String character;
   List<Items> items;
 
   Games(
@@ -34,7 +34,7 @@ class Games {
       this.name,
       this.thumbnail,
       this.description,
-      this.type,
+      this.character,
       this.items});
 
   Games.fromJson(Map<String, dynamic> json) {
@@ -42,7 +42,7 @@ class Games {
     name = json['name'];
     thumbnail = json['thumbnail'];
     description = json['description'];
-    type = json['type'];
+    character = json['character'];
     if (json['items'] != null) {
       items = new List<Items>();
       json['items'].forEach((v) {
@@ -57,7 +57,7 @@ class Games {
     data['name'] = this.name;
     data['thumbnail'] = this.thumbnail;
     data['description'] = this.description;
-    data['type'] = this.type;
+    data['character'] = this.character;
     if (this.items != null) {
       data['items'] = this.items.map((v) => v.toJson()).toList();
     }
