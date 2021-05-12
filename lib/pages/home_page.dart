@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:design_system/design_system.dart';
+import 'package:flutter/material.dart';
 
-import '../app/utils/utils.dart';
 import '../constants/constants.dart';
+import '../utils/utils.dart';
 import 'games_list_page.dart';
 
 class HomePage extends StatelessWidget {
