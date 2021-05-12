@@ -10,6 +10,7 @@ class CardImage extends StatelessWidget {
     this.width = 318.0,
     this.height = 84.0,
     this.overlayText = '',
+    this.onTap,
   })  : assert(imageUrl != null,
             'A non-null String must be provided to the imageUrl parameter.'),
         assert(imageUrl != '',
@@ -21,47 +22,52 @@ class CardImage extends StatelessWidget {
   final double height;
   final String imageUrl;
   final String overlayText;
+  final GestureTapCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        Container(
-          width: width,
-          height: height,
-          decoration: BoxDecoration(
-            border: Border.all(width: 4),
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              colorFilter: ColorFilter.mode(
-                primaryColor.withOpacity(0.25),
-                BlendMode.darken,
-              ),
-              image: NetworkImage(imageUrl),
-            ),
-          ),
-        ),
-        Visibility(
-          visible: overlayText.isNotEmpty,
-          child: SizedBox(
+    return InkWell(
+      onTap: onTap,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
             width: width,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Flexible(
-                  child: Text(
-                    overlayText,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.center,
-                  ).p2(color: secondaryColor),
+            height: height,
+            decoration: BoxDecoration(
+              color: primaryColor,
+              border: Border.all(width: 4),
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                  primaryColor.withOpacity(0.25),
+                  BlendMode.darken,
                 ),
-              ],
+                image: NetworkImage(imageUrl),
+              ),
             ),
           ),
-        ),
-      ],
+          Visibility(
+            visible: overlayText.isNotEmpty,
+            child: SizedBox(
+              width: width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: Text(
+                      overlayText,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                    ).p2(color: secondaryColor),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

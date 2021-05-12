@@ -21,9 +21,10 @@ class GamesListPage extends StatelessWidget {
             const SizedBox(height: spaceL),
             const Center(child: _List()),
             const SizedBox(height: spaceL),
-            const CardIconName(
+            CardIconName(
               icon: iconOpenBook,
               name: 'about us',
+              onTap: () {},
             ),
           ],
         ),
@@ -37,10 +38,11 @@ class _List extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CardImage(
+    return CardImage(
       imageUrl:
           'https://cdn-www.bluestacks.com/bs-images/lineage-revolution-ii_banner.jpg',
       overlayText: 'Lineage 2',
+      onTap: () {},
     );
   }
 }

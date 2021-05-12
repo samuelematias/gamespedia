@@ -10,6 +10,7 @@ class CardIconName extends StatelessWidget {
     this.child,
     this.width = 318.0,
     this.height = 55.0,
+    this.onTap,
   })  : assert(icon != null,
             'A non-null String must be provided to the icon parameter.'),
         assert(icon != '',
@@ -25,21 +26,24 @@ class CardIconName extends StatelessWidget {
   final double height;
   final String icon;
   final String name;
+  final GestureTapCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      // height: height,
-      decoration: BoxDecoration(
-        border: Border.all(width: 4),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          Image.asset(icon),
-          Flexible(child: Text(name.toUpperCase()).h3()),
-        ],
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        width: width,
+        decoration: BoxDecoration(
+          border: Border.all(width: 4),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            Image.asset(icon),
+            Flexible(child: Text(name.toUpperCase()).h3()),
+          ],
+        ),
       ),
     );
   }
