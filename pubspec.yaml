@@ -32,3 +32,4 @@ flutter:
         - asset: assets/fonts/DisposableDroidBB_bld.ttf
   assets:
     - assets/images/
+    - assets/images/icons/
