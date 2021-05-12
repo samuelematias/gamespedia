@@ -1,6 +1,7 @@
 <!-- header section -->
 <p align="center">
   <img alt="gamespedia" height="250" src="https://i.imgur.com/yUJzdfQ.png" />
+  <br/>
   <span><b>Gamespedia 👾</b></span><br/>
 </p>
 <!-- header section END -->
@@ -9,7 +10,7 @@
 
 <!-- show case/gif section -->
 <p align="center">
-    <img alt="gamespedia-app" src="https://i.imgur.com/49kSZTV.gif" />
+<a href="https://imgur.com/a8qBUYZ"><img src="https://i.imgur.com/a8qBUYZ.gif" title="source: imgur.com" /></a>
 </p>
 <!-- show case/gif section END -->
 
