@@ -31,4 +31,8 @@ This App would be an encyclopedia of games, where you can find details of some g
 
 - [transparent_image](https://pub.dev/packages/transparent_image)
 
+## Tools 🛠
+
+- [hover](https://github.com/go-flutter-desktop/hover)
+
 <!-- about app and course section END -->
