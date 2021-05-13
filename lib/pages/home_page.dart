@@ -26,7 +26,6 @@ class HomePage extends StatelessWidget {
                     child: Image.asset(
                       gamespediaImg,
                       fit: BoxFit.cover,
-                      // fit: BoxFit.contain,
                     ),
                   ),
                   Center(
